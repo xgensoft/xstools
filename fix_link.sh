@@ -19,6 +19,7 @@ do
 		DIRNAME="$(dirname "${FILENAME}")"
 		if [ -f "$DIRNAME/$VALUE" ]; then
 		    echo "$FILENAME -> $VALUE is valid"
+		    ln -rfs $DIRNAME/$VALUE $FILENAME
 		    echo -e "replaced\n"
 		fi
 	    fi
